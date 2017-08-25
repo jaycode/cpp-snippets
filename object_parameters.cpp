@@ -13,15 +13,13 @@
 using namespace std;
 
 void Test(const vector<double> &in, vector<double> *out) {
-  vector<double> *out1 = out;
-  vector<double> out2 = *out;
   cout << "in: " << in[0] << endl;
   // in: 1
   
-  cout << "out1: " << out1 << endl;
+  cout << "out: " << out << endl;
   // out1: 0x7ffc45be1360after
 
-  cout << "out2: " << out2[0] << endl;
+  cout << "(*out): " << (*out)[0] << endl;
   // out2: 1
 
   // This is the only way to update.

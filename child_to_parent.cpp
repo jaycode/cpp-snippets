@@ -1,6 +1,7 @@
 /**
  * Compile and run:
  * g++ -std=c++14 child_to_parent.cpp -o child_to_parent.out && ./child_to_parent.out
+ *
  * Can we pass child class when the function requires parent class?
  * Nope. The function has to request child class i.e. in the code below, use
  * CarConfig and BicycleConfig instead of Config for the constructors.

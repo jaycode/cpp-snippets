@@ -1,6 +1,7 @@
 /**
  * Compile and run:
  * g++ -std=c++14 enum_iteration.cpp -o enum_iteration.out && ./enum_iteration.out
+ *
  * Can enum be iterated?
  * Yes, but it needs another function to print out its name.
  */

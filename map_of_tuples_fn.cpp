@@ -27,8 +27,7 @@ int main() {
   // Tuple object needs to be defined first and then added to map:
   std::tuple<std::string, int(*)()> t;
   std::get<0>(t) = "hello";
-  int (*funPtr)() = fun;
-  std::get<1>(t) = funPtr;
+  std::get<1>(t) = fun;
   tm["key1"] = t;
 
   // To use:

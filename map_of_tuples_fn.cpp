@@ -6,8 +6,8 @@
  * to one of the tuple elements.
  *
  * In python, this is as simple as:
- * def fun():
- *   return 1
+ * def fun(num):
+ *   return num
  * tm = {
  *   "key1": ("hello", fun)
  * }
@@ -20,19 +20,19 @@
 int fun() {
   return 1;
 }
-typedef std::map<std::string, std::tuple<std::string, int(*)()>> TupleMap;
+typedef std::map<std::string, std::tuple<std::string, int(*)(int)>> TupleMap;
 
 int main() {
   TupleMap tm;
   // Tuple object needs to be defined first and then added to map:
-  std::tuple<std::string, int(*)()> t;
+  std::tuple<std::string, int(*)(int)> t;
   std::get<0>(t) = "hello";
   std::get<1>(t) = fun;
   tm["key1"] = t;
 
   // To use:
   std::cout << std::get<0>(tm["key1"]) << " " <<
-    std::get<1>(tm["key1"])() << std::endl;
+    std::get<1>(tm["key1"])(1) << std::endl;
   // hello 1
 }
 

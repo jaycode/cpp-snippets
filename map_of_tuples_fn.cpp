@@ -17,8 +17,8 @@
 #include <string>
 #include <map>
 
-int fun() {
-  return 1;
+int fun(int num) {
+  return num;
 }
 typedef std::map<std::string, std::tuple<std::string, int(*)(int)>> TupleMap;
 
